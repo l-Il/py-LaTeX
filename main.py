@@ -1,0 +1,1 @@
+# doc.packages.add(Package('babel', options=['russian']))
