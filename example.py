@@ -80,7 +80,7 @@ if __name__ == '__main__':  # Запуск программы
                     plot.append(Plot(name='Function', func='-x^5 - 242'))
 
                     # Создаём список координат
-                    coordinates = [
+                    coords = [
                         (-4.77778, 2027.60977),
                         (-3.55556, 347.84069),
                         (-2.33333, 22.58953),
@@ -92,11 +92,11 @@ if __name__ == '__main__':  # Запуск программы
                         (5.00000, -3269.56775),
                     ]
                     # Либо на график можно добавить точки вручную по координатам
-                    plot.append(Plot(name='By hand', coordinates=coordinates))
+                    plot.append(Plot(name='By hand', coordinates=coords))
 
     # В этой же директории создаём .pdf документ с настройками выше
-    # С названием "example"
-    # Выбираем НЕ удалять .tex файл
-    doc.generate_pdf('example', clean_tex=False)
+    # Первый аргумент - название файлов
+    # clean_tex -  не удалять .tex файл
+    doc.generate_pdf('test', clean_tex=False)
     # Выводим "статус" в консоль, о том, что программа отработала
     print('Готово!')
