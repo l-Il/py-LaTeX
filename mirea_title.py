@@ -1,3 +1,5 @@
+# Бета версия программы, автоматически создающей титульный лист с введёнными в консоль данными.
+
 from datetime import datetime as time
 import os
 from pylatex import Command, Document, Figure, Foot, LargeText, LineBreak, MediumText, MiniPage, TextBlock, Package, PageStyle
@@ -19,13 +21,12 @@ if __name__ == '__main__':
     header = PageStyle("header")
     with header.create(Foot("C")):
         header.append(f'Moscow, {time.now().timetuple().tm_year}\n')
-
     doc.preamble.append(header)
     doc.change_document_style("header")
 
+    # Обложка
     doc.change_length("\TPHorizModule", "1mm")
     doc.change_length("\TPVertModule", "1mm")
-
     with doc.create(MiniPage(width=r"\textwidth")) as page:
 
         with page.create(TextBlock(180, 0, 0)):
