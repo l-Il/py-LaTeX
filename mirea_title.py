@@ -12,10 +12,9 @@ class Title:
         self.root = Tk()
         self.root.geometry('350x450')
         self.root.title('Создать титульный лист:')
-        # self.root.configure(background='#202020')
 
         # Конструктор окна приложения (GUI)
-        self.status = Label(self.root, text='Введитe поля ниже и нажмите кнопку.')
+        self.status = Label(self.root, text='Введите поля ниже и нажмите кнопку.')
         self.status.place(x=0, y=10, width=350, height=20)
         Label(self.root, text='Название отчёта:').place(x=0, y=40, width=100, height=20)
         self.entry1 = Entry(self.root)
