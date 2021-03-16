@@ -28,7 +28,6 @@ class Title:
         self.male.place(x=140, y=90)
         self.female = Radiobutton(self.root, text="Женский", variable=self.your_var, value=1)
         self.female.place(x=140, y=110)
-
         self.var = IntVar()
         self.var.set(0)
         Label(self.root, text='Пол преподавателя:').place(x=220, y=130, width=140, height=20)
